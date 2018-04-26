@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WASMBOOTH</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/switches.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>WASMBOOTH</h1>
+
+        <div class="content">
+
+            <div class="top">
+
+                <div class="controls left">
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="mirror_x_on" type="checkbox">
+
+                            <strong>Mirror X</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="mirror_y_on" type="checkbox">
+
+                            <strong>Mirror Y</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="grayscale_on" type="checkbox">
+
+                            <strong>Grayscale</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="blur_on" type="checkbox">
+
+                            <strong>Blur</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <h2>LOADING...</h2>
+                    <canvas id="canvas" width="400" height="400"></canvas>
+                    <canvas id="capture" width="450" height="490"></canvas>
+                    <img id="template" src="/template.png" alt="">
+                    <p id="fps"></p>
+                </div>
+
+                <div class="controls right">
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="outline_on" type="checkbox">
+
+                            <strong>Outline</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="sharpen_on" type="checkbox">
+
+                            <strong>Sharpen</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="invert_on" type="checkbox">
+
+                            <strong>Invert</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="emboss_on" type="checkbox">
+
+                            <strong>Emboss</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <a href="#" class="button" id="btn-download" download="wasmbooth.png">CAPTURE</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        Made by
+        <a href="https://twitter.com/mt_harrison">@mt_harrison
+            <a/>. Find the
+            <a href="">code on Github.</a>
+        </a>
+    </footer>
+
+    <script src="/bundle.js"></script>
+</body>
+
+</html>

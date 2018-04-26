@@ -1,0 +1,164 @@
+body {
+    background: radial-gradient(ellipse at center, #5a46ee 0%,#4435b2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #F2F2F2;
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 46px;
+    color: #F4EFE5;
+    text-align: center;
+    font-weight: normal;
+}
+
+.video h2 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 34px;
+    color: #4435b2;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    top: 140px;
+    left: 88px;
+    z-index: 0;
+}
+
+.container {
+    width: 620px;
+    margin: auto;
+}
+
+.content > div.top {
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.container .video {
+    position: relative;
+    box-shadow: 6px 6px 1px 0px rgba(0,0,0, 0.3);
+    width: 400px;
+    height: 400px;
+    background: #F4EFE5;
+    float: left;
+    padding: 10px 10px 50px;
+    position: relative;
+}
+
+.video #canvas {
+    z-index: 5;
+    position: absolute;
+}
+
+.container .video #fps {
+    position: absolute;
+    top: 369px;
+    right: 10px;
+    font-size: 13px;
+    background: rgba(0,0,0,0.5);
+    padding: 5px;
+    z-index: 10;
+}
+
+.container .controls {
+    float: left;
+    width: 70px;
+    padding: 15px;
+}
+
+.controls.left {
+    text-align: right;
+}
+
+.controls.left .switch-material.switch-light > span {
+    left: 20px;
+}
+
+.control-set-left {
+    float: left;
+    margin-right: 30px;
+}
+
+.control-set-right {
+    float: left;
+}
+
+.content > div.bottom {
+    margin-top: 15px;
+}
+
+.switch-option {
+    margin: 0px 0px 15px;
+}
+
+.switch-option span {
+    margin-top: 5px;
+    outline: none;
+    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5) inset;
+}
+
+.switch-option span a {
+    outline: none!important;
+    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+}
+
+#btn-download {
+    font-family: 'Bungee Shade', cursive;
+    border-radius: 28px;
+    color: #4435b2;
+    font-size: 24px;
+    background: #F4EFE5;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    box-shadow: 0px 6px 1px 0px rgba(0,0,0, 0.3);
+    width: 140px;
+    display:block;
+    margin: auto;
+    text-align: center;
+}
+
+#btn-download:hover {
+  text-decoration: none;
+  position:relative;
+  top: 1px;
+}
+
+#btn-download:active {
+  text-decoration: none;
+  position:relative;
+  top: 3px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+footer a {
+    color: white;
+}
+
+#template, #capture {
+    display: none;
+}
+
+.flash {
+  opacity: 1;
+  -webkit-animation: flash 1s;
+  animation: flash 1s;
+}
+
+@-webkit-keyframes flash {
+  0% {  opacity: .3;  }
+  100% { opacity: 1; }
+}
+@keyframes flash {
+  0% { opacity: .3; }
+  100% { opacity: 1;  }
+}
