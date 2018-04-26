@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WASMBOOTH</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="switches.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="content">
+
+            <h1>WASMBOOTH</h1>
+
+            <div class="top">
+
+                <div class="controls left">
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="mirror_x_on" type="checkbox">
+
+                            <strong>Mirror X</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="mirror_y_on" type="checkbox">
+
+                            <strong>Mirror Y</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="grayscale_on" type="checkbox">
+
+                            <strong>Grayscale</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="blur_on" type="checkbox">
+
+                            <strong>Blur</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <h2 id="loading">HAZ CAM?</h2>
+                    <canvas id="canvas" width="400" height="400"></canvas>
+                    <canvas id="capture" width="450" height="490"></canvas>
+                    <video id="video" autoplay></video>
+                    <img id="template" src="data:image/png;base64,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"
+                        alt="">
+                    <audio src="shutter.mp3" id="shutter"></audio>
+                    <p id="fps"></p>
+                </div>
+
+                <div class="controls right">
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="outline_on" type="checkbox">
+
+                            <strong>Outline</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="sharpen_on" type="checkbox">
+
+                            <strong>Sharpen</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="invert_on" type="checkbox">
+
+                            <strong>Invert</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="switch-option">
+                        <label class="switch-light switch-material">
+                            <input id="emboss_on" type="checkbox">
+
+                            <strong>Emboss</strong>
+                            <span>
+                                <span>Off</span>
+                                <span>On</span>
+                                <a></a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <a href="#" class="button" id="btn-download" download="wasmbooth.png">CAPTURE</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        Made by
+        <a href="https://twitter.com/mt_harrison">@mt_harrison
+            <a/>. Find the
+            <a href="https://github.com/mtharrison/wasmbooth">code on Github.</a>
+        </a>
+    </footer>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

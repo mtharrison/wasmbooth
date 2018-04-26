@@ -1,0 +1,30 @@
+{
+  "name": "wasmbooth",
+  "version": "1.0.0",
+  "description": "Wasm video filter booth app written in Rust",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "cargo test",
+    "build-wasm": "cargo +nightly build --release --target wasm32-unknown-unknown && mv target/wasm32-unknown-unknown/release/wasmbooth.wasm public",
+    "build-js": "webpack .",
+    "build": "npm run build-wasm && npm run build-js",
+    "build-web": "npm run build && cp -a public/. docs/",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wasm",
+    "webassembly",
+    "rust",
+    "video"
+  ],
+  "author": "Matt Harrison <hi@matt-harrison.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^17.3.1",
+    "inert": "^5.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
