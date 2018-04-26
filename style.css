@@ -13,6 +13,10 @@ h1 {
     font-weight: normal;
 }
 
+#video {
+    display: none;
+}
+
 .video h2 {
     font-family: 'Bungee Shade', cursive;
     font-size: 34px;
