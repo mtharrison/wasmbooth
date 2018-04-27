@@ -1,16 +1,16 @@
 ![WASMBOOTH](https://raw.githubusercontent.com/mtharrison/wasmbooth/master/public/logo.png)
 
-## Video effect booth written in Rust and Webassembly
+## Video effect booth written in Rust and WebAssembly
 
 Play with it here: https://mtharrison.github.io/wasmbooth/
 
 ### Aim
 
-I wrote this purely to teach myself more about both Rust and Webassembly and how to use the two together. The aim of this is definitely _not_ to show off the performance of wasm. I haven't benchmarked or compared this to a pure JS implementation but I wouldn't be surprised if it were slower because it copies all the ImageData from canvas into the wasm linear memory on every frame. Additionally it uses convolutional image processing for a few of the effects, which aren't the most efficient algorithms but are elegant and easy to write/understand.
+I wrote this purely to teach myself more about both Rust and WebAssembly and how to use the two together. The aim of this is definitely _not_ to show off the performance of wasm. I haven't benchmarked or compared this to a pure JS implementation but I wouldn't be surprised if it were slower because it copies all the ImageData from canvas into the wasm linear memory on every frame. Additionally it uses convolutional image processing for a few of the effects, which aren't the most efficient algorithms but are elegant and easy to write/understand.
 
 ### How it works
 
-The front end is usual HTML, CSS, JS. It streams your webcam into an offscreen video element, which is then written to a hidden canvas. On each frame we grab the image data from the canvas and write it into webassembly's linear memory at a pre-determined offset. We then call a webassembly function that will process those pixels with our chosen filters. Finally, we construct a new ImageData object and put it on a visible canvas.
+The front end is usual HTML, CSS, JS. It streams your webcam into an offscreen video element, which is then written to a hidden canvas. On each frame we grab the image data from the canvas and write it into WebAssembly's linear memory at a pre-determined offset. We then call a WebAssembly function that will process those pixels with our chosen filters. Finally, we construct a new ImageData object and put it on a visible canvas.
 
 To capture a still, we write the visible canvas data into a premade template.
 
