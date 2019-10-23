@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:slim
 
 WORKDIR /usr/src/app
 
@@ -9,5 +9,5 @@ RUN npm ci --only=production
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 4000
 CMD [ "node", "server.js" ]

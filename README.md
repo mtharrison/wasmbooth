@@ -48,9 +48,15 @@ Build the image:
 
 - `docker build -t mtharrison/wasmbooth .`
 
-Run the image (on port 8080):
+Run the image (on port 4000):
 
-- `docker run -p 8080:4000 mtharrison/wasmbooth`
+- `docker run -p 4000:4000 mtharrison/wasmbooth`
+
+#### Using Docker with docker-compose
+
+```
+docker-compose up --build
+```
 
 ### Contributing
 
