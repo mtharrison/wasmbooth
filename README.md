@@ -42,6 +42,22 @@ There are some Rust tests, to run them run:
 
 - `npm test` or `cargo test`
 
+#### Using Docker
+
+Build the image:
+
+- `docker build -t mtharrison/wasmbooth .`
+
+Run the image (on port 4000):
+
+- `docker run -p 4000:4000 mtharrison/wasmbooth`
+
+#### Using Docker with docker-compose
+
+```
+docker-compose up --build
+```
+
 ### Contributing
 
 PRs welcome to improve the code or approach or to add more effects, this is all about learning! I'm a newbie to both Rust and wasm so please open an issue if you think there's something I missed or could have done better.
